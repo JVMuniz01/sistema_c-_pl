@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Cygwin",
+            "compilerPath": "C:/cygwin64/bin/g++.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x64",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/cygwin64/usr/lib/gcc/x86_64-pc-cygwin/13/include/c++",
+                "C:/cygwin64/usr/lib/gcc/x86_64-pc-cygwin/13/include/c++/x86_64-pc-cygwin",
+                "C:/cygwin64/usr/lib/gcc/x86_64-pc-cygwin/13/include/c++/backward",
+                "C:/cygwin64/usr/lib/gcc/x86_64-pc-cygwin/13/include",
+                "C:/cygwin64/usr/include",
+                "C:/cygwin64/usr/lib/gcc/x86_64-pc-cygwin/13/../../../../include/w32api"
+            ]
+        }
+    ],
+    "version": 4
+}
