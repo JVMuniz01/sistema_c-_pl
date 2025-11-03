@@ -7,13 +7,12 @@ class ContaCorrente : public Conta
 {
 private:
     double taxaSaque;
-    
+
 protected:
 double saldo;
 
 public:
     ContaCorrente(Pessoa p, int s, double sal = 0.0, double taxa = 2.5);
-    void sacar(double valor) override;
     void exibirTipo() const override;
 };
 
