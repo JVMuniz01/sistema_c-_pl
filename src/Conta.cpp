@@ -4,14 +4,14 @@
 #include <ctime>
 using namespace std;
 
-// Construtor
+
+
 Conta::Conta(Pessoa p, int s) : cliente(p), saldo(0.0) {
     srand(time(0));
     numeroConta = 100000 + rand() % 900000;
     senha = s;
 }
 
-// Sacar dinheiro
 void Conta::sacar(double valor) {
     if(valor > saldo) {
         cout << "Saldo insuficiente. Sacando todo o saldo disponível: " << saldo << endl;
@@ -21,10 +21,31 @@ void Conta::sacar(double valor) {
         cout << "Saque realizado com sucesso. Novo saldo: " << saldo << endl;
     }
 }
-
 void Conta::depositar(double valor) {
     saldo += valor;
     cout << "Depósito realizado com sucesso. Novo saldo: " << saldo << endl;
+}
+void Conta::depositarSimples(double valor) {
+    saldo += valor;
+    cout << "Depósito realizado com sucesso. Novo saldo: " << saldo << endl;
+}
+
+bool Conta::transferir(Conta &destino, double valor, int s) {
+    if(!validarSenha(s)) {
+        return false;
+    }
+    
+    if(valor > saldo) {
+        return false;
+    }
+
+    saldo -= valor;
+    destino.depositarSimples(valor);
+    return true;
+}
+
+void Conta::exibirTipo() const {
+    std::cout << "Conta genérica" << std::endl;
 }
 
 int Conta::getNumeroConta() {
