@@ -11,7 +11,6 @@ using namespace std;
 int main() {
     vector<Conta*> contas;
 
-    // Contas pré-criadas
     contas.push_back(new ContaCorrente(Pessoa("Sergio", "12345678900"), 1004, 500.0));
     contas.push_back(new ContaCorrente(Pessoa("Ivo", "98765432100"), 1002, 1000.0));
     contas.push_back(new ContaCorrente(Pessoa("J.Carlos", "98765432100"), 1003, 1000.0));

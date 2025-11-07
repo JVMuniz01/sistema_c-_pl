@@ -3,10 +3,8 @@
 
 #include "Pessoa.h"
 #include <string>
-
-class Conta
-{
-private:
+class Conta{
+protected:
     Pessoa cliente;
     static int contador;
     int numeroConta;

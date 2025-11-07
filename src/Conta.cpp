@@ -4,14 +4,6 @@
 #include <ctime>
 using namespace std;
 
-
-
-Conta::Conta(Pessoa p, int s) : cliente(p), saldo(0.0) {
-    srand(time(0));
-    numeroConta = 100000 + rand() % 900000;
-    senha = s;
-}
-
 void Conta::sacar(double valor) {
     if(valor > saldo) {
         cout << "Saldo insuficiente. Sacando todo o saldo disponível: " << saldo << endl;
